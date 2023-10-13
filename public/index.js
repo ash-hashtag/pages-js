@@ -78,11 +78,29 @@
   var firstPageBuilder = (_) => {
     const d = document.createElement("div");
     d.innerText = `first ${_}`;
+    const p = document.createElement("p");
+    p.innerText = "0";
+    d.appendChild(p);
+    const btn = document.createElement("button");
+    btn.innerText = "+";
+    btn.addEventListener("click", (_2) => {
+      p.innerText = `${Number(p.innerText) + 1}`;
+    });
+    d.appendChild(btn);
     return d;
   };
   var secondPageBuilder = (_) => {
     const d = document.createElement("div");
     d.innerText = `second ${_}`;
+    const p = document.createElement("p");
+    p.innerText = "0";
+    d.appendChild(p);
+    const btn = document.createElement("button");
+    btn.innerText = "+";
+    btn.addEventListener("click", (_2) => {
+      p.innerText = `${Number(p.innerText) + 1}`;
+    });
+    d.appendChild(btn);
     return d;
   };
   var errorBuilder = (_) => {

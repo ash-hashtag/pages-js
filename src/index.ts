@@ -4,12 +4,30 @@ import { Router } from "./router";
 const firstPageBuilder = (_: any) => { 
     const d = document.createElement("div")
     d.innerText = `first ${_}`
+    const p = document.createElement("p")
+    p.innerText = '0'
+    d.appendChild(p)
+    const btn = document.createElement("button")
+    btn.innerText = '+'
+    btn.addEventListener('click', _ => {
+        p.innerText = `${Number(p.innerText) + 1}`
+    })
+    d.appendChild(btn)
     return d
 }
 
 const secondPageBuilder = (_: any) => { 
     const d = document.createElement("div")
     d.innerText = `second ${_}`
+    const p = document.createElement("p")
+    p.innerText = '0'
+    d.appendChild(p)
+    const btn = document.createElement("button")
+    btn.innerText = '+'
+    btn.addEventListener('click', _ => {
+        p.innerText = `${Number(p.innerText) + 1}`
+    })
+    d.appendChild(btn)
     return d
 }
 
